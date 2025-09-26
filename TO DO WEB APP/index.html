@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="app-title">ToDo App</h1>
+            <button class="theme-toggle" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </header>
+
+        <!-- Task Input Section -->
+        <section class="task-input-section">
+            <div class="input-container">
+                <input type="text" id="taskInput" class="task-input" placeholder="Add a new task..." maxlength="200">
+                <button id="addTaskBtn" class="add-btn">
+                    <span class="btn-text">Add</span>
+                    <span class="btn-icon">+</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Filter and Search Section -->
+        <section class="controls-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search tasks...">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="filter-icon">📋</span>
+                    <span class="filter-text">All</span>
+                </button>
+                <button class="filter-btn" data-filter="pending">
+                    <span class="filter-icon">⏳</span>
+                    <span class="filter-text">Pending</span>
+                </button>
+                <button class="filter-btn" data-filter="completed">
+                    <span class="filter-icon">✅</span>
+                    <span class="filter-text">Completed</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Task List Section -->
+        <section class="task-list-section">
+            <div class="task-stats">
+                <span id="totalTasks">0</span> tasks total • 
+                <span id="completedTasks">0</span> completed • 
+                <span id="pendingTasks">0</span> pending
+            </div>
+            <ul class="task-list" id="taskList">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">📝</div>
+                <h3>No tasks yet</h3>
+                <p>Add your first task to get started!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
